@@ -27,9 +27,9 @@
             };
           script = site: pkgs.writeText "script.sh" ''
             #!/usr/bin/env nix-shell
+            #! nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/40cffc01bc89548395103929e3ddb98b57d00e67.tar.gz
             #! nix-shell -i bash --pure
             #! nix-shell -p bash nodejs python3 curl cacert
-            #! nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/40cffc01bc89548395103929e3ddb98b57d00e67.tar.gz
 
 
             # fetch epg
