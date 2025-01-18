@@ -26,6 +26,7 @@
               sha256 = "sha256-dSTSlv6fuUE1msppzDUFi3asX/7ar5cXYuJg40R8ric=";
             };
           script = site: pkgs.writeText "script.sh" ''
+            #!${pkgs.bash}/bin/bash
             # fetch epg
 
             temp_dir=$(mktemp -d)
